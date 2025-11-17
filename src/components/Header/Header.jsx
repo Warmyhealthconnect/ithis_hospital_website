@@ -4,7 +4,7 @@ import './Header.css'
 export default function Header() {
   return (
     <header className="header">
-      <div className="container header__inner">
+      {/* <div className="container header__inner">
         <div className="header__brand">
           <span className="brand__logo">i</span>
           <span className="brand__text">this</span>
@@ -17,7 +17,7 @@ export default function Header() {
           <a href="#">Contact</a>
         </nav>
         <button className="header__cta">Book Now</button>
-      </div>
+      </div> */}
     </header>
   )
 }
