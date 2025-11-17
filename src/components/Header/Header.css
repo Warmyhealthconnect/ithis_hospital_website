@@ -1,0 +1,33 @@
+.nav-link{
+    color: var(--main-color);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.header {
+  background-color: transparent !important;
+  position: fixed;
+  top: 1vw;
+  left: 3vw;
+  width: 94vw;
+  z-index: 1000;
+  padding: 2vh 2vw;  /* adjust spacing */
+}
+
+.leftlist{
+    background-color: azure;
+}
+
+.navbar-list {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0;      /* removes UL default padding */
+  list-style: none;     /* removes bullets */
+  gap: 15px;            /* spacing between items */
+  align-items: center;  /* vertically center them */
+}
+
+.contact-btn{
+    background-color: var(--main-color);
+    font-size: 1.1vw;
+}

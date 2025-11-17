@@ -1,13 +1,6 @@
-.footer { background: var(--teal-700); color: var(--white); margin-top: 64px; }
-.footer__grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; padding: 40px 0; }
-.footer__col h4 { font-size: 16px; margin-bottom: 12px; }
-.footer__col ul { list-style: none; display: grid; gap: 8px; }
-.footer__col a { color: var(--white); opacity: .9; }
-.footer__col a:hover { opacity: 1; }
-.footer__bottom { background: var(--teal-600); }
-.footer__bottomInner { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
-.footer__brand { display: flex; align-items: center; gap: 8px; font-weight: 700; }
-.brand__logo { display: inline-flex; width: 28px; height: 28px; align-items: center; justify-content: center; border-radius: 6px; background: var(--white); color: var(--teal-700); font-weight: 700; }
-.brand__text { letter-spacing: .5px; }
-@media (max-width: 900px) { .footer__grid { grid-template-columns: repeat(2, 1fr); } }
-@media (max-width: 600px) { .footer__grid { grid-template-columns: 1fr; } }
+.footer{
+    background-color: var(--main-color);
+    height: 100vh;
+    color: var(--white);
+    margin-top: 64px;
+}
