@@ -1,0 +1,50 @@
+.hero { background: var(--teal-600); color: var(--white); }
+.hero__inner { padding: 72px 0; display: grid; gap: 16px; }
+.hero h1 { font-size: 40px; line-height: 1.15; max-width: 800px; }
+.hero p { opacity: .9; }
+.hero__actions { margin-top: 8px; }
+
+.search { background: var(--gray-100); }
+.search__inner { padding: 32px 0; display: grid; gap: 16px; }
+.search__bar { display: flex; gap: 12px; }
+.search__bar input { flex: 1; padding: 12px 14px; border-radius: 8px; border: 1px solid var(--gray-200); }
+.search__note { color: var(--gray-700); }
+
+.hospitalCard__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; padding: 40px 0; align-items: center; }
+.hospitalCard__img { width: 100%; height: 280px; object-fit: cover; border-radius: 12px; }
+.hospitalCard__content { display: grid; gap: 12px; }
+.stats { display: flex; gap: 24px; margin-top: 8px; }
+.stat { display: grid; }
+.stat__num { font-weight: 700; font-size: 24px; }
+.stat__label { color: var(--gray-700); }
+
+.motherhood__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 40px 0; align-items: center; }
+.motherhood__content { display: grid; gap: 12px; }
+.bullets { display: grid; gap: 8px; }
+.motherhood__images { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.motherhood__images img { width: 100%; height: 220px; object-fit: cover; border-radius: 12px; }
+
+.departments { background: var(--gray-100); }
+.departments__header { display: flex; align-items: center; justify-content: space-between; padding: 32px 0 16px; }
+.pillRow { display: flex; flex-wrap: wrap; gap: 12px; padding-bottom: 24px; }
+.pill { padding: 10px 14px; border-radius: 999px; border: 1px solid var(--teal-600); background: var(--white); color: var(--teal-700); cursor: pointer; }
+
+.services .cardGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 24px 0; }
+.services .card img { width: 100%; height: 180px; object-fit: cover; border-radius: 12px; }
+.services .card__title { margin-top: 8px; font-weight: 600; }
+
+.whyus__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 40px 0; align-items: center; }
+.whyus__content { display: grid; gap: 12px; }
+.checklist { list-style: none; display: grid; gap: 8px; }
+.whyus__img { width: 100%; height: 320px; object-fit: cover; border-radius: 12px; }
+
+@media (max-width: 900px) {
+  .hospitalCard__grid,
+  .motherhood__grid,
+  .whyus__grid { grid-template-columns: 1fr; }
+  .services .cardGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .hero h1 { font-size: 30px; }
+  .services .cardGrid { grid-template-columns: 1fr; }
+}
