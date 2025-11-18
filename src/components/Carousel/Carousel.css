@@ -1,0 +1,52 @@
+.home-carousel-section {
+  position: relative;
+  /* **Crucial:** Establishes a positioning context for the ::before element */
+  width: 100%;
+  height: 1000px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: baseline;
+  align-items: end;
+  padding: 5%;
+  /* Other carousel styles */
+}
+
+.home-carousel-section::before {
+  content: "";
+  /* **Crucial:** Required for the ::before element to be rendered */
+  position: absolute;
+  /* **Crucial:** Allows us to precisely size and position it */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  /* The black transparent color */
+  z-index: 1;
+  /* **Crucial:** Ensure it's above any content inside the container. Adjust as needed. */
+}
+
+.home-carousel-txts {
+  margin-bottom: 7rem;
+  width: 1000px;
+  z-index: 1;
+  color: white;
+}
+
+.carousel-heading {
+  font-size: 70px;
+  font-weight: 700;
+}
+
+.carousel-para {
+  font-size: 30px;
+}
+
+.carousel-btn {
+  background-color: var(--main-color);
+  padding: 1.5%;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
