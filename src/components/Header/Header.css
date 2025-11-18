@@ -16,18 +16,73 @@
 
 .leftlist{
     background-color: azure;
+    border-radius: 10px;
 }
 
 .navbar-list {
   margin-left: 0 !important;
   margin-right: 0 !important;
   padding-left: 0;      /* removes UL default padding */
-  list-style: none;     /* removes bullets */
-  gap: 15px;            /* spacing between items */
+  list-style: none;     /* removes bullets */          /* spacing between items */
   align-items: center;  /* vertically center them */
 }
 
 .contact-btn{
     background-color: var(--main-color);
+    border-radius: 10px;
     font-size: 1.1vw;
+}
+
+/* Hamburger Button */
+.hamburger-btn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  color: var(--main-color);
+  font-weight: 800;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.mobile-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.mobile-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-list a {
+  color: var(--main-color);
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+/* Mobile Contact Button */
+.mobile-contact {
+  background-color: var(--main-color);
+  color: white;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hide mobile menu on desktop */
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none !important;
+  }
 }
