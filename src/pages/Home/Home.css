@@ -1,39 +1,442 @@
 .home-carousel-section {
-    position: relative; /* **Crucial:** Establishes a positioning context for the ::before element */
-    width: 100%;
-    height: 1000px;
-    background-color: #f5f5f5;
-    display: flex;
-    justify-content: baseline;
-    align-items: end;
-    padding: 5%;
-    /* Other carousel styles */
+  position: relative;
+  /* **Crucial:** Establishes a positioning context for the ::before element */
+  width: 100%;
+  height: 1000px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: baseline;
+  align-items: end;
+  padding: 5%;
+  /* Other carousel styles */
 }
 
 .home-carousel-section::before {
-    content: ""; /* **Crucial:** Required for the ::before element to be rendered */
-    position: absolute; /* **Crucial:** Allows us to precisely size and position it */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.24); /* The black transparent color */
-    z-index: 1; /* **Crucial:** Ensure it's above any content inside the container. Adjust as needed. */
-} 
+  content: "";
+  /* **Crucial:** Required for the ::before element to be rendered */
+  position: absolute;
+  /* **Crucial:** Allows us to precisely size and position it */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.24);
+  /* The black transparent color */
+  z-index: 1;
+  /* **Crucial:** Ensure it's above any content inside the container. Adjust as needed. */
+}
 
-.home-carousel-txts{
-  margin-bottom: 10rem;
+.home-carousel-txts {
+  margin-bottom: 7rem;
   width: 1000px;
+  z-index: 1;
+  color: white;
 }
 
-.carousel-heading{
+.carousel-heading {
   font-size: 70px;
+  font-weight: 700;
 }
 
-.carousel-para{
+.carousel-para {
   font-size: 30px;
 }
 
-.carousel-btn{
+.carousel-btn {
   background-color: var(--main-color);
+  padding: 1.5%;
+  color: white;
+  font-size: 25px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+/* --- SearchSection.css --- */
+
+.search-section {
+  /* Adjust padding to position the content correctly on the page */
+  padding: 6%;
+  /* Random value for padding-left */
+  padding-bottom: 140px;
+  /* Random value for padding-bottom */
+  background-color: #ffffff;
+  /* Explicit white background */
+}
+
+.search-section__heading {
+  font-size: 50px;
+  /* Random value for font-size */
+  font-weight: 500;
+  /* Random value for font-weight */
+  color: #1a1a1a;
+  /* Random dark grey for text */
+  line-height: 1.25;
+  /* Random value for line-height */
+  margin-bottom: 35px;
+  /* Random value for margin-bottom */
+}
+
+.search-section__input-group {
+  display: flex;
+  align-items: stretch;
+  border: 4px solid var(--main-color);
+  /* Random dark teal border */
+  border-radius: 10px;
+  /* Random value for border-radius */
+  overflow: hidden;
+  max-width: 100%;
+  /* Random value for max-width */
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+  /* Random subtle shadow */
+  height: 100px;
+}
+
+.search-section__input {
+  display: flex;
+  align-items: center;
+  padding: 16px 22px;
+  /* Random values for padding */
+  background-color: #fcfcfc;
+  /* Random off-white background */
+  flex-grow: 1;
+}
+
+.search-section__input--doctors {
+  border-right: 2px solid #5a7d8a;
+  /* Random dark teal border for separator */
+}
+
+.search-section__input .icon {
+  margin-right: 12px;
+  /* Random value for margin */
+  font-size: 22px;
+  /* Random value for font-size */
+  color: black;
+  /* Icon color matching border */
+}
+
+.search-section__input input {
+  border: none;
+  outline: none;
+  font-size: 19px;
+  /* Random value for font-size */
+  flex-grow: 1;
+  color: #1a1a1a;
+  /* Text color matching heading */
+}
+
+.search-section__input input::placeholder {
+  color: #777777;
+  /* Random medium grey for placeholder */
+  font-size: 19px;
+  /* Matching input font-size */
+}
+
+.search-section__button {
+  background-color: var(--main-color);
+  /* Random deep slate blue/teal */
+  color: #f0f0f0;
+  /* Random light grey/white for text */
+  border: none;
+  padding: 18px 35px;
+  /* Random values for padding */
+  font-size: 20px;
+  /* Random value for font-size */
+  font-weight: 550;
+  /* Random value for font-weight */
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.hospital-disc-container {
+  margin-top: 170px;
+  font-size: 30px;
+  width: 600px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.hospital-disc {
+  width: 75%;
+  text-align: center;
+  font-size: 40px;
+  line-height: 100%;
+}
+
+.search-section__button:hover {
+  background-color: #355060;
+  /* Darker shade on hover */
+}
+
+/* --- Optional: Responsive adjustments --- */
+@media (max-width: 900px) {
+  .search-section__input-group {
+    flex-direction: column;
+    border: none;
+    box-shadow: none;
+  }
+
+  .search-section__input {
+    border: 1px solid #5a7d8a;
+    /* Individual border */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .search-section__input--doctors {
+    border-right: none;
+  }
+
+  .search-section__button {
+    width: 100%;
+    padding: 18px 30px;
+    border-radius: 8px;
+  }
+
+  .search-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+
+/* --- AboutSection.css --- */
+
+.about-section {
+  /* padding: 8%; */
+  /* Vertical and horizontal padding */
+  background-color: #ffffff;
+  /* White background */
+}
+
+.about-section__inner {
+  display: flex;
+  justify-content: space-between;
+  /* Center the entire block */
+  align-items: flex-start;
+  /* Align columns to the top */
+  gap: 100px;
+  /* Large space between the image and content */
+  /* Max width for the content block */
+  margin: 0 auto;
+  padding:5%;
+  /* Center the content block horizontally */
+}
+
+/* --- Image Column Styling --- */
+
+.about-section__image-col {
+  flex-shrink: 0;
+  /* Prevents image column from shrinking */
+  width: 70%;
+  max-width: 800px;
+  /* Limit the size of the image container */
+  /* Optional: If you want the image to maintain a specific aspect ratio */
+}
+
+.about-section__image {
+  width: 100%;
+  height: 650px;
+  display: block;
+  /* Large border radius for the image as seen in the screenshot */
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
+
+/* --- Content Column Styling --- */
+
+.about-section__content-col {
+  width: 50%;
+  padding-top: 30px;
+  /* Adjust vertical alignment of text */
+}
+
+.about-section__text {
+  font-size: 30px;
+  line-height: 1.6;
+  margin-bottom: 70px;
+  /* Space before the stats block */
+  max-width: 650px;
+  line-height:35px;
+}
+
+.about-section__text strong {
+  font-weight: 600;
+  /* Emphasize key text */
+}
+
+/* --- Stats Styling --- */
+
+.about-section__stats {
+  display: flex;
+  flex-direction: column;
+  /* Stack stats vertically */
+  gap: 15px;
+}
+
+.stat {
+  /* Style for each individual stat block */
+}
+
+.stat__number {
+  font-size: 62px;
+  /* Large font size for the numbers */
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+.stat__label {
+  font-size: 18px;
+  color: #666666;
+  margin: 0;
+}
+
+.stat__divider {
+  border: none;
+  height: 1px;
+  background-color: black;
+  width: 600px;
+  /* Light grey divider line */
+  width: 250px;
+  /* Length of the divider as seen in the image */
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+  .about-section__inner {
+    flex-direction: column;
+    /* Stack image and content vertically */
+    gap: 50px;
+    align-items: center;
+  }
+
+  .about-section__image-col,
+  .about-section__content-col {
+    width: 100%;
+    max-width: 700px;
+    /* Constrain max width for better reading */
+  }
+
+  .about-section__content-col {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 50px 5%;
+  }
+
+  .stat__number {
+    font-size: 56px;
+  }
+
+  .about-section__text {
+    font-size: 18px;
+  }
+
+  .stat__divider {
+    width: 100%;
+  }
+}
+
+/* --- MaternitySection.css --- */
+
+.maternity-section {
+    /* Use a light background color to separate it visually from adjacent white sections */
+    background-color: #f8f8f8; 
+    padding: 100px 5%; 
+}
+
+.maternity-section__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    /* 💥 INCREASED GAP HERE 💥 */
+    gap: 150px; 
+    max-width: 1300px;
+    margin: 0 auto; 
+}
+
+/* --- Content Column Styling (Left) --- */
+
+.maternity-section__content-col {
+    width: 50%;
+    /* Added padding-right to guarantee separation if gap is not fully supported or on smaller screens */
+    padding-right: 25px; 
+    flex-shrink: 0;
+    max-width: 500px; 
+}
+
+.maternity-section__heading {
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 30px; 
+}
+
+.maternity-section__text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    max-width: 500px;
+}
+
+.maternity-section__text strong {
+    font-weight: 600;
+}
+
+/* --- Image Column Styling (Right) --- */
+
+.maternity-section__image-col {
+    width: 50%;
+    max-width: 550px; 
+}
+
+.maternity-section__image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px; 
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); 
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 1024px) {
+    .maternity-section__inner {
+        flex-direction: column-reverse; 
+        /* Reduced gap when stacked vertically */
+        gap: 50px; 
+        align-items: center;
+    }
+    
+    .maternity-section__content-col {
+        width: 100%;
+        max-width: 700px;
+        padding-right: 0; /* Remove horizontal padding when stacked */
+    }
+
+    .maternity-section__image-col {
+        width: 100%;
+        max-width: 700px;
+    }
+
+    .maternity-section__heading {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+    .maternity-section {
+        padding: 50px 5%;
+    }
+    .maternity-section__text {
+        font-size: 16px;
+    }
 }
